@@ -11,7 +11,7 @@ jobs:
 - job: Windows
   pool:
     name: NetCorePublic-Int-Pool
-    queue: buildpool.windows.10.amd64.vs2017.open
+    queue: BuildPool.Windows.10.Amd64.VS2017.Open
   variables:
     _os: Windows
   strategy:
@@ -43,7 +43,7 @@ jobs:
 - job: Linux
   pool: 
    name: NetCorePublic-Int-Pool
-   queue: buildpool.ubuntu.1604.amd64.open
+   queue: BuildPool.Ubuntu.1604.amd64.Open
   variables:
     _os: Linux
   strategy:
@@ -74,9 +74,9 @@ jobs:
       condition: not(succeeded())
       
 - job: Windows_Spanish
-  pool: 
-   name: NetCorePublic-Int-Pool
-   queue: buildpool.windows.10.amd64.es.vs2017.open
+  pool:
+    name: NetCorePublic-Int-Pool
+    queue: BuildPool.Windows.10.Amd64.ES.VS2017.Open
   variables:
     _os: Windows
   strategy:
